@@ -50,7 +50,7 @@ class DBCon {
 		mysqli_close($this -> database_handle);
 	}
 	public function GetKartya() {
-		$klista = mysqli_query($this -> database_handle, "SELECT * FROM kartyak;");
+		$klista = mysqli_query($this -> database_handle, "SELECT * FROM kartyak ORDER BY Szam DESC LIMIT 4;");
 		while ($row = mysqli_fetch_assoc($klista)) {
 			echo '<div class="card">' . '<img src="' . $row["Kep"] . '">' . '<div class="container">' . '<a href="' . $row["Link"] . '">' . '<h4><b>' . $row["Nev"] . '</b></h4>' . '<p>' . $row["Iras"] . '</p></a></div></div>';
 		}
