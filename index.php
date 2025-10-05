@@ -94,9 +94,8 @@ include 'mySQL.php';
   <br>
   <br>
   <?php
-    foreach (glob("*.txt") as $pfile) {
-      echo '<p class="para">' . file_get_contents($pfile) . " --" . str_replace(".txt","",str_replace("-", ":", $pfile)) . '</p><br>';
-    }
+      $DBCon = new DBCon();
+      $DBCon -> GetKomment();
   ?>
   <form class="para" action="#" method="POST">
     <textarea id="chat" name="chat" placeholder="Írjon véleményt"></textarea>
@@ -107,11 +106,10 @@ include 'mySQL.php';
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			if ($_SESSION["LoggedIn"] != "") {
 				$name = $_SESSION["LoggedIn"];
-				$fname = $name . " " . date("Ymd-H-i-s") . ".txt";
-		    	$text = htmlspecialchars($_POST['chat']);
-		    	$file = fopen($fname,"w");
-		    	fwrite($file, $text);
-		    	fclose($file);
+				$date = date("Y-m-d H:i:s");
+				$chat = '<a href="#">' . htmlspecialchars($_POST['chat']) . '</a>';
+				$DBCon = new DBCon();
+				$DBCon -> WriteKomment($name, $date, $chat);
 		    } else {
 		    	echo '<p class="para">' . 'Ehez be kell jelentkezned!' . '</p>';
 		    }
