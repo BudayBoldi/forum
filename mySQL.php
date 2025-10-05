@@ -55,5 +55,22 @@ class DBCon {
 			echo '<div class="card">' . '<img src="' . $row["Kep"] . '">' . '<div class="container">' . '<a href="' . $row["Link"] . '">' . '<h4><b>' . $row["Nev"] . '</b></h4>' . '<p>' . $row["Iras"] . '</p></a></div></div>';
 		}
 	}
+	public function WriteKomment($un, $dt, $txt) {
+		if(mysqli_query($this -> database_handle, "INSERT INTO kommentek VALUES ('$un', '$dt', '$txt');")) {
+			echo '<p class="para">' . 'Berakva!' . '</p>';
+			return true;
+		} else {
+			echo "Hiba: " . mysqli_error($this -> database_handle);
+			return false;
+		}
+
+		mysqli_close($this -> database_handle);
+	}
+	public function GetKomment() {
+		$kom = mysqli_query($this -> database_handle, "SELECT * FROM kommentek ORDER BY Datum DESC;");
+		while ($row = mysqli_fetch_assoc($kom)) {
+			echo '<p class="para">' . $row["Szoveg"] . " --" . $row["Nev"] . " " . $row["Datum"] . '</p><br>';
+		}
+	}
 }
 ?>
