@@ -1,7 +1,7 @@
 let image = document.getElementById("banner");
 let link = document.getElementById("bannid");
-const banners = ["banners/hungarikum.jpg", "banners/draga.jpg", "banners/tamogatas.jpg"];
-const bannids = ["#", "#", "#"];
+const banners = ["banners/hungarikum.jpg", "banners/draga.jpg", "banners/tamogatas.jpg", "banners/ado1sz.png"];
+const bannids = ["#", "#", "#", "#"];
 let i = 0;
 
 setInterval(function() {
