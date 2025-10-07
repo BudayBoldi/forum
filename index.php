@@ -4,6 +4,7 @@
     <meta name="keywords" content="Széchenyi Fórum">
     <meta name="description" content="Széchenyi Fórum">
     <link rel="stylesheet" href="szechenyi.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 <?php
