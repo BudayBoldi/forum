@@ -43,7 +43,7 @@ class DBCon {
 			echo "Belerakva!";
 			return true;
 		} else {
-			echo "Hiba: " . mysqli_error($this -> database_handle);
+			echo "Hiba!";
 			return false;
 		}
 
@@ -60,7 +60,7 @@ class DBCon {
 			echo '<p class="para">' . 'Berakva!' . '</p>';
 			return true;
 		} else {
-			echo "Hiba: " . mysqli_error($this -> database_handle);
+			echo "Hiba!";
 			return false;
 		}
 
