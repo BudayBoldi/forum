@@ -50,7 +50,7 @@ class DBCon {
 		mysqli_close($this -> database_handle);
 	}
 	public function GetKartya() {
-		$klista = mysqli_query($this -> database_handle, "SELECT * FROM kartyak ORDER BY Szam DESC LIMIT 4;");
+		$klista = mysqli_query($this -> database_handle, "SELECT * FROM kartyak ORDER BY Szam DESC LIMIT 8;");
 		while ($row = mysqli_fetch_assoc($klista)) {
 			echo '<div class="card">' . '<img src="' . $row["Kep"] . '">' . '<div class="container">' . '<a href="' . $row["Link"] . '">' . '<h4><b>' . $row["Nev"] . '</b></h4>' . '<p>' . $row["Iras"] . '</p></a></div></div>';
 		}
@@ -67,7 +67,7 @@ class DBCon {
 		mysqli_close($this -> database_handle);
 	}
 	public function GetKomment() {
-		$kom = mysqli_query($this -> database_handle, "SELECT * FROM kommentek ORDER BY Datum DESC;");
+		$kom = mysqli_query($this -> database_handle, "SELECT * FROM kommentek ORDER BY Datum DESC LIMIT 8;");
 		while ($row = mysqli_fetch_assoc($kom)) {
 			echo '<p class="para">' . $row["Szoveg"] . " --" . $row["Nev"] . " " . $row["Datum"] . '</p><br>';
 		}
