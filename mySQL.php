@@ -13,9 +13,9 @@ class DBCon {
 	}
 
 	public function GetTable($nq, $pq) {
-		$passwd = mysqli_query($this -> database_handle, "SELECT Home FROM tabla WHERE Name='$nq';");
+		$passwd = mysqli_query($this -> database_handle, "SELECT Pwd FROM tabla WHERE Name='$nq';");
 		$age = mysqli_query($this -> database_handle, "SELECT Age FROM tabla WHERE Name='$nq';");
-		$pres = mysqli_fetch_assoc($passwd)["Home"];
+		$pres = mysqli_fetch_assoc($passwd)["Pwd"];
 		$ares = mysqli_fetch_assoc($age)["Age"];
 		$salt = "$1$".$ares."$";
 
@@ -55,8 +55,8 @@ class DBCon {
 			echo '<div class="card">' . '<img src="' . $row["Kep"] . '">' . '<div class="container">' . '<a href="' . $row["Link"] . '">' . '<h4><b>' . $row["Nev"] . '</b></h4>' . '<p>' . $row["Iras"] . '</p></a></div></div>';
 		}
 	}
-	public function WriteKomment($un, $dt, $txt) {
-		if(mysqli_query($this -> database_handle, "INSERT INTO kommentek VALUES ('$un', '$dt', '$txt');")) {
+	public function WriteKomment($un, $dt, $txt, $src) {
+		if(mysqli_query($this -> database_handle, "INSERT INTO kommentek VALUES ('$un', '$dt', '$txt', '$src');")) {
 			echo '<p class="para">' . 'Berakva!' . '</p>';
 			return true;
 		} else {
