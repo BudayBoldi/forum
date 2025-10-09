@@ -104,13 +104,15 @@ include 'mySQL.php';
   </form>
 
 	<?php
+		$keres = $_GET["q"];
+      		
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			if ($_SESSION["LoggedIn"] != "") {
 				$name = $_SESSION["LoggedIn"];
 				$date = date("Y-m-d H:i:s");
 				$chat = '<a href="#">' . htmlspecialchars($_POST['chat']) . '</a>';
 				$DBCon = new DBCon();
-				$DBCon -> WriteKomment($name, $date, $chat);
+				$DBCon -> WriteKomment($name, $date, $chat, $keres);
 		    } else {
 		    	echo '<p class="para">' . 'Ehez be kell jelentkezned!' . '</p>';
 		    }
