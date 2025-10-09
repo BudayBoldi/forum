@@ -9,6 +9,7 @@
 <body>
 <?php
 include 'mySQL.php';
+$keres = htmlspecialchars($_GET["q"]);
 ?>
 <div id="dmenu">
   <img src="logo.jpg" id="logo">
@@ -16,7 +17,7 @@ include 'mySQL.php';
   <div class="dropdown">
     <button class="dropbtn">Fórum</button>
     <div class="dropdown-content">
-      <a href="#">Hírek</a>
+      <a href="http://localhost/forum/index.php?q=forum_hirek">Hírek</a>
       <a href="#">Előadások</a>
       <a href="#">Archívum</a>
       <a href="#">Széchenyi és...</a>
@@ -33,7 +34,7 @@ include 'mySQL.php';
     <button class="dropbtn">Széchenyi Alapítvány</button>
     <div class="dropdown-content">
       <a href="#">DSzD</a>
-      <a href="#">Hírek</a>
+      <a href="http://localhost/forum/index.php?q=szalap_hirek">Hírek</a>
       <a href="#">Dokumentumok</a>
       <a href="#">Hitel átírása, fordítása</a>
       <a href="#">Önkéntes</a>
@@ -45,18 +46,18 @@ include 'mySQL.php';
   <div class="dropdown">
     <button class="dropbtn">Gyüjtő Kollégium</button>
     <div class="dropdown-content">
-      <a href="#">Gyüjtői gondolatok</a>
+      <a href="http://localhost/forum/index.php?q=gyujto_gondolatok">Gyüjtői gondolatok</a>
       <a href="#">Gyüjtemény</a>
       <a href="#">Keres-kutat</a>
       <a href="#">Tanulmány</a>
-      <a href="#">Hírek</a>
+      <a href="http://localhost/forum/index.php?q=gyujto_hirek">Hírek</a>
     </div>
   </div>
 
   <div class="dropdown">
     <button class="dropbtn">Széchenyi Társaság</button>
     <div class="dropdown-content">
-      <a href="#">Hírek</a>
+      <a href="http://localhost/forum/index.php?q=sztars_hirek">Hírek</a>
       <!-- <a href="#">Soproni konferencia</a> -->
       <a href="#">Eszmesúrlódások</a>
       <a href="#">Ünnepeink</a>
@@ -64,7 +65,7 @@ include 'mySQL.php';
       <a href="#">Széchenyiről</a>
       <!-- <a href="#">Budakeszi Széchenyi Kör</a> -->
       <a href="#">Köz- és média-kapcsolat</a>
-      <a href="#">In Memoriam</a>
+      <a href="http://localhost/forum/index.php?q=sztars_inmemoriam">In Memoriam</a>
       <a href="#">Magunkról</a>
     </div>
   </div>
@@ -72,8 +73,8 @@ include 'mySQL.php';
   <div class="dropdown">
     <button class="dropbtn" title="Országos Széchenyi Kör">OSzK</button>
     <div class="dropdown-content">
-      <a href="#">Hírek</a>
-      <a href="#">Magunkról</a>
+      <a href="http://localhost/forum/index.php?q=oszk_hirek">Hírek</a>
+      <a href="http://localhost/forum/index.php?q=oszk_magunkrol">Magunkról</a>
       <a href="#">Emlékezés Széchenyire</a>
       <a href="#">Tájékoztatás</a>
       <a href="#">Dokumentumok</a>
@@ -96,16 +97,14 @@ include 'mySQL.php';
   <br>
   <?php
       $DBCon = new DBCon();
-      $DBCon -> GetKomment();
+      $DBCon -> GetKomment($keres);
   ?>
   <form class="para" action="#" method="POST">
     <textarea id="chat" name="chat" placeholder="Írjon véleményt"></textarea>
     <input id="subbtn" type="submit" value="Beküldés">
   </form>
 
-	<?php
-		$keres = $_GET["q"];
-      		
+	<?php	
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			if ($_SESSION["LoggedIn"] != "") {
 				$name = $_SESSION["LoggedIn"];
@@ -120,7 +119,7 @@ include 'mySQL.php';
 	?>
 	<?php
 	  $DBCon = new DBCon();
-  	  $DBCon -> GetKartya();
+  	  $DBCon -> GetKartya($keres);
 	?>
 
   <p id="copy">© Copyright szechenyiforum.hu</p>
