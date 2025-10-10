@@ -17,7 +17,7 @@ $keres = htmlspecialchars($_GET["q"]);
   <div class="dropdown">
     <button class="dropbtn">Fórum</button>
     <div class="dropdown-content">
-      <a href="http://localhost/forum/index.php?q=forum_hirek">Hírek</a>
+      <a href="index.php?q=forum_hirek">Hírek</a>
       <a href="#">Előadások</a>
       <a href="#">Archívum</a>
       <a href="#">Széchenyi és...</a>
@@ -34,7 +34,7 @@ $keres = htmlspecialchars($_GET["q"]);
     <button class="dropbtn">Széchenyi Alapítvány</button>
     <div class="dropdown-content">
       <a href="#">DSzD</a>
-      <a href="http://localhost/forum/index.php?q=szalap_hirek">Hírek</a>
+      <a href="index.php?q=szalap_hirek">Hírek</a>
       <a href="#">Dokumentumok</a>
       <a href="#">Hitel átírása, fordítása</a>
       <a href="#">Önkéntes</a>
@@ -46,18 +46,18 @@ $keres = htmlspecialchars($_GET["q"]);
   <div class="dropdown">
     <button class="dropbtn">Gyüjtő Kollégium</button>
     <div class="dropdown-content">
-      <a href="http://localhost/forum/index.php?q=gyujto_gondolatok">Gyüjtői gondolatok</a>
+      <a href="index.php?q=gyujto_gondolatok">Gyüjtői gondolatok</a>
       <a href="#">Gyüjtemény</a>
       <a href="#">Keres-kutat</a>
       <a href="#">Tanulmány</a>
-      <a href="http://localhost/forum/index.php?q=gyujto_hirek">Hírek</a>
+      <a href="index.php?q=gyujto_hirek">Hírek</a>
     </div>
   </div>
 
   <div class="dropdown">
     <button class="dropbtn">Széchenyi Társaság</button>
     <div class="dropdown-content">
-      <a href="http://localhost/forum/index.php?q=sztars_hirek">Hírek</a>
+      <a href="index.php?q=sztars_hirek">Hírek</a>
       <!-- <a href="#">Soproni konferencia</a> -->
       <a href="#">Eszmesúrlódások</a>
       <a href="#">Ünnepeink</a>
@@ -65,7 +65,7 @@ $keres = htmlspecialchars($_GET["q"]);
       <a href="#">Széchenyiről</a>
       <!-- <a href="#">Budakeszi Széchenyi Kör</a> -->
       <a href="#">Köz- és média-kapcsolat</a>
-      <a href="http://localhost/forum/index.php?q=sztars_inmemoriam">In Memoriam</a>
+      <a href="index.php?q=sztars_inmemoriam">In Memoriam</a>
       <a href="#">Magunkról</a>
     </div>
   </div>
@@ -73,8 +73,8 @@ $keres = htmlspecialchars($_GET["q"]);
   <div class="dropdown">
     <button class="dropbtn" title="Országos Széchenyi Kör">OSzK</button>
     <div class="dropdown-content">
-      <a href="http://localhost/forum/index.php?q=oszk_hirek">Hírek</a>
-      <a href="http://localhost/forum/index.php?q=oszk_magunkrol">Magunkról</a>
+      <a href="index.php?q=oszk_hirek">Hírek</a>
+      <a href="index.php?q=oszk_magunkrol">Magunkról</a>
       <a href="#">Emlékezés Széchenyire</a>
       <a href="#">Tájékoztatás</a>
       <a href="#">Dokumentumok</a>
