@@ -62,6 +62,17 @@ class DBCon {
 			}
 		}
 	}
+	public function WriteKartya($szam, $nev, $iras, $kep, $link, $url) {
+		if(mysqli_query($this -> database_handle, "INSERT INTO kartyak VALUES ('$szam', '$nev', '$iras', '$kep', '$link', '$url');")) {
+			echo 'Cikk berakva!';
+			return true;
+		} else {
+			echo "Hiba!";
+			return false;
+		}
+
+		mysqli_close($this -> database_handle);
+	}
 	public function WriteKomment($un, $dt, $txt, $src) {
 		if(mysqli_query($this -> database_handle, "INSERT INTO kommentek VALUES ('$un', '$dt', '$txt', '$src');")) {
 			echo '<p class="para">' . 'Berakva!' . '</p>';
