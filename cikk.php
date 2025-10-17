@@ -3,7 +3,6 @@
   <input type="text" class="cikk" name="leiras" placeholder="Rövid összegzés">
   <input type="text" class="cikk" name="bkep" placeholder="Borítókép (fájl neve)">
   <input type="text" class="cikk" name="lap" placeholder="Weblap (fájl neve)">
-  <label for="cikks">Oldal_aloldal:</label>
 
   <select id="cikks" name="kereses">
     <option value="forum_hirek">Fórum hirek</option>
@@ -36,4 +35,5 @@
 			echo 'Jelentkezz be!';
 		}
 	}
+
 ?>
