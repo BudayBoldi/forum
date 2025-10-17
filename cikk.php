@@ -22,7 +22,7 @@
 	include 'mySQL.php';
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		if ($_SESSION["LoggedIn"] == "Anonym" OR $_SESSION["LoggedIn"] == "Anonym2") {
+		if ($_SESSION["LoggedIn"] == "Anonym") {
 			$neve = htmlspecialchars($_POST['neve']);
 			$leiras = htmlspecialchars($_POST['leiras']);
 			$bkep = htmlspecialchars($_POST['bkep']);
@@ -37,3 +37,4 @@
 	}
 
 ?>
+
