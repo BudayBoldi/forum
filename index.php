@@ -18,28 +18,28 @@ $keres = htmlspecialchars($_GET["q"]);
     <button class="dropbtn">Fórum</button>
     <div class="dropdown-content">
       <a href="index.php?q=forum_hirek">Hírek</a>
-      <a href="#">Előadások</a>
-      <a href="#">Archívum</a>
-      <a href="#">Széchenyi és...</a>
-      <a href="#">MKR sorozata 2010</a>
-      <a href="#">Legyen hungarikum</a>
-      <a href="#">Könyv is cikkajánló</a>
-      <a href="#">Érdekességek</a>
-      <!-- <a href="#">Vélemény</a> -->
-      <!-- <a href="#">Figyelő</a> -->
+      <a href="index.php?q=forum_eloadasok">Előadások</a>
+      <a href="index.php?q=forum_archivum">Archívum</a>
+      <a href="index.php?q=forum_szechenyies">Széchenyi és...</a>
+      <a href="index.php?q=forum_mkrsorozata2010">MKR sorozata 2010</a>
+      <a href="index.php?q=forum_legyenhungarikum">Legyen hungarikum</a>
+      <a href="index.php?q=forum_konyvescikkajanlo">Könyv is cikkajánló</a>
+      <a href="index.php?q=forum_erdekessegek">Érdekességek</a>
+      <a href="index.php?q=forum_velemeny">Vélemény</a>
+      <a href="index.php?q=forum_figyelo">Figyelő</a>
     </div>
   </div>
 
   <div class="dropdown">
     <button class="dropbtn">Széchenyi Alapítvány</button>
     <div class="dropdown-content">
-      <a href="#">DSzD</a>
+      <a href="index.php?q=szalap_dszd">szalap_dszd</a>
       <a href="index.php?q=szalap_hirek">Hírek</a>
-      <a href="#">Dokumentumok</a>
-      <a href="#">Hitel átírása, fordítása</a>
-      <a href="#">Önkéntes</a>
-      <a href="#">Adomány</a>
-      <a href="#">Pályázatok</a>
+      <a href="index.php?q=szalap_dokumentumok">Dokumentumok</a>
+      <a href="./oldalak/hitel.html">Hitel átírása, fordítása</a>
+      <a href="index.php?q=szalap_onkentes">Önkéntes</a>
+      <a href="index.php?q=szalap_adomany">Adomány</a>
+      <a href="index.php?q=szalap_palyazatok">Pályázatok</a>
     </div>
   </div>
 
@@ -47,9 +47,9 @@ $keres = htmlspecialchars($_GET["q"]);
     <button class="dropbtn">Gyüjtő Kollégium</button>
     <div class="dropdown-content">
       <a href="index.php?q=gyujto_gondolatok">Gyüjtői gondolatok</a>
-      <a href="#">Gyüjtemény</a>
-      <a href="#">Keres-kutat</a>
-      <a href="#">Tanulmány</a>
+      <a href="index.php?q=gyujto_gyujtemeny">Gyüjtemény</a>
+      <a href="index.php?q=gyujto_kereskutat">Keres-kutat</a>
+      <a href="index.php?q=gyujto_tanulmany">Tanulmány</a>
       <a href="index.php?q=gyujto_hirek">Hírek</a>
     </div>
   </div>
@@ -58,15 +58,15 @@ $keres = htmlspecialchars($_GET["q"]);
     <button class="dropbtn">Széchenyi Társaság</button>
     <div class="dropdown-content">
       <a href="index.php?q=sztars_hirek">Hírek</a>
-      <!-- <a href="#">Soproni konferencia</a> -->
-      <a href="#">Eszmesúrlódások</a>
-      <a href="#">Ünnepeink</a>
-      <a href="#">Széchenyi Társaság Díja</a>
-      <a href="#">Széchenyiről</a>
-      <!-- <a href="#">Budakeszi Széchenyi Kör</a> -->
-      <a href="#">Köz- és média-kapcsolat</a>
+      <a href="index.php?q=sztars_sopronkonf">Soproni konferencia</a>
+      <a href="index.php?q=sztars_eszmesurlodasok">Eszmesúrlódások</a>
+      <a href="index.php?q=sztars_unnepeink">Ünnepeink</a>
+      <a href="index.php?q=sztars_szechenyitarsasagdija">Széchenyi Társaság Díja</a>
+      <a href="index.php?q=sztars_szechenyirol">Széchenyiről</a>
+      <a href="index.php?q=sztars_budakeszibaratikor">Budakeszi Széchenyi Kör</a>
+      <a href="index.php?q=sztars_kozesmediakapcsolat">Köz- és média-kapcsolat</a>
       <a href="index.php?q=sztars_inmemoriam">In Memoriam</a>
-      <a href="#">Magunkról</a>
+      <a href="index.php?q=sztars_magunkrol">Magunkról</a>
     </div>
   </div>
 
@@ -75,12 +75,12 @@ $keres = htmlspecialchars($_GET["q"]);
     <div class="dropdown-content">
       <a href="index.php?q=oszk_hirek">Hírek</a>
       <a href="index.php?q=oszk_magunkrol">Magunkról</a>
-      <a href="#">Emlékezés Széchenyire</a>
-      <a href="#">Tájékoztatás</a>
-      <a href="#">Dokumentumok</a>
-      <a href="#">Szervezet</a>
-      <a href="#">Archívum</a>
-      <a href="#">Önkéntes</a>
+      <a href="index.php?q=oszk_emlekezesszechenyire">Emlékezés Széchenyire</a>
+      <a href="index.php?q=oszk_tajekoztatas">Tájékoztatás</a>
+      <a href="index.php?q=oszk_dokumentumok">Dokumentumok</a>
+      <a href="index.php?q=oszk_szervezet">Szervezet</a>
+      <a href="./oldalak/">Archívum</a>
+      <a href="./oldalak/">Önkéntes</a>
     </div>
   </div>
 
