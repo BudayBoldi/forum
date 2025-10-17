@@ -12,7 +12,7 @@ include 'mySQL.php';
 $keres = htmlspecialchars($_GET["q"]);
 ?>
 <div id="dmenu">
-  <img src="logo.jpg" id="logo">
+  <img src="logo.jpg" id="logo" OnClick="location.href='http://localhost/forum/';">
 
   <div class="dropdown">
     <button class="dropbtn">Fórum</button>
@@ -109,7 +109,7 @@ $keres = htmlspecialchars($_GET["q"]);
 			if ($_SESSION["LoggedIn"] != "") {
 				$name = $_SESSION["LoggedIn"];
 				$date = date("Y-m-d H:i:s");
-				$chat = '<a href="#">' . htmlspecialchars($_POST['chat']) . '</a>';
+				$chat = '<a href="http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '">' . htmlspecialchars($_POST['chat']) . '</a>';
 				$DBCon = new DBCon();
 				$DBCon -> WriteKomment($name, $date, $chat, $keres);
 		    } else {
