@@ -36,7 +36,7 @@ $keres = htmlspecialchars($_GET["q"]);
       <a href="index.php?q=szalap_dszd">szalap_dszd</a>
       <a href="index.php?q=szalap_hirek">Hírek</a>
       <a href="index.php?q=szalap_dokumentumok">Dokumentumok</a>
-      <a href="./oldalak/hitel.html">Hitel átírása, fordítása</a>
+      <a href="index.php?q=szalap_hitel">Hitel átírása, fordítása</a>
       <a href="index.php?q=szalap_onkentes">Önkéntes</a>
       <a href="index.php?q=szalap_adomany">Adomány</a>
       <a href="index.php?q=szalap_palyazatok">Pályázatok</a>
