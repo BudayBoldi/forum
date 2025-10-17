@@ -79,8 +79,8 @@ $keres = htmlspecialchars($_GET["q"]);
       <a href="index.php?q=oszk_tajekoztatas">Tájékoztatás</a>
       <a href="index.php?q=oszk_dokumentumok">Dokumentumok</a>
       <a href="index.php?q=oszk_szervezet">Szervezet</a>
-      <a href="./oldalak/">Archívum</a>
-      <a href="./oldalak/">Önkéntes</a>
+      <!-- <a href="#">Archívum</a> -->
+      <!-- <a href="#">Önkéntes</a> -->
     </div>
   </div>
 
