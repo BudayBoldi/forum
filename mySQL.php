@@ -53,12 +53,12 @@ class DBCon {
 		if($kerka == "") {
 			$klista = mysqli_query($this -> database_handle, "SELECT * FROM kartyak ORDER BY Szam DESC LIMIT 8;");
 			while ($row = mysqli_fetch_assoc($klista)) {
-				echo '<div class="card">' . '<img src="' . $row["Kep"] . '">' . '<div class="container">' . '<a href="' . $row["Link"] . '">' . '<h4><b>' . $row["Nev"] . '</b></h4>' . '<p>' . $row["Iras"] . '</p></a></div></div>';
+				echo '<div class="card">' . '<img src="' . $row["Kep"] . '">' . '<div class="container">' . '<a href="' . $_SERVER['REQUEST_URI'] . '?url=' . urlencode($row["Link"]) . '">' . '<h4><b>' . $row["Nev"] . '</b></h4>' . '<p>' . $row["Iras"] . '</p></a></div></div>';
 			}
 		} else {
 			$klista = mysqli_query($this -> database_handle, "SELECT * FROM kartyak WHERE Ker='$kerka' ORDER BY Szam DESC LIMIT 8;");
 			while ($row = mysqli_fetch_assoc($klista)) {
-				echo '<div class="card">' . '<img src="' . $row["Kep"] . '">' . '<div class="container">' . '<a href="' . $row["Link"] . '">' . '<h4><b>' . $row["Nev"] . '</b></h4>' . '<p>' . $row["Iras"] . '</p></a></div></div>';
+				echo '<div class="card">' . '<img src="' . $row["Kep"] . '">' . '<div class="container">' . '<a href="' . $_SERVER['REQUEST_URI'] . '&?url=' . urlencode($row["Link"]) . '">' . '<h4><b>' . $row["Nev"] . '</b></h4>' . '<p>' . $row["Iras"] . '</p></a></div></div>';
 			}
 		}
 	}
