@@ -1,6 +1,6 @@
 let image = document.getElementById("banner");
 let link = document.getElementById("bannid");
-const banners = ["banners/hungarikum.jpg", "banners/draga.jpg", "banners/tamogatas.jpg", "banners/ado1sz.png"];
+const banners = ["banners/hungarikum.jpg", "banners/draga.jpg", "banners/tamogatas.jpg", "banners/ado1sz.jpg"];
 const bannids = ["#", "#", "#", "#"];
 let i = 0;
 
